@@ -1,8 +1,8 @@
 # heat equation solution animation
 This python code calculates numerical solution to heat equation and outputs an animated gif. the heat equation is
-$$ u_{t}=ku_{xx}$$
+$$u_{t}=ku_{xx}$$
 with initial and boundary conditions:
-$$ u(0,t)=a,\quad u(L,t)=b,\quad u(x,0)=g(x)$$
+$$u(0,t)=a,\quad u(L,t)=b,\quad u(x,0)=g(x)$$
 ## Setup Environment
 Needs python 3.10 installed, then run the command to install the dependencies
 ```

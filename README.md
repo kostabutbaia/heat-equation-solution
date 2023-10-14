@@ -20,6 +20,7 @@ You can try sample solutions which are already in the code, in json set `Use` to
     "solution": "default_1"
 },
 ```
+There are 3 sample solutions: `default_1`, `pos_x_squared` and `neg_x_squared`
 ### Custom Solution
 Set `Use` for sample to false and specify your own parameters, for example
 ```json
@@ -45,8 +46,9 @@ Set `Use` for sample to false and specify your own parameters, for example
     }
 }
 ```
+For large `amount_of_x_points`, `amount_of_t_points` and `partial_sum_amount` the code takes long time to compute the solution 
 
-## Generate Animation of the Solution
+## Animation and Graph of the Solution
 To generate the gif animation of the solution for your specified parameters run the command
 ```
 python anim.py
@@ -56,4 +58,8 @@ The gif will be placed in solutions directory.
 To graph each frame on the same plot run the command:
 ```
 python heateq.py
+```
+For 3d surface plot of $u(x,t)$ run the command
+```
+python 3dgraph.py
 ```

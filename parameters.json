@@ -1,7 +1,7 @@
 {   
     "Sample_Solutions": {
-        "Use": false,
-        "solution": "default_1"
+        "Use": true,
+        "solution": "pos_x_squared"
     },
     "Solution_Name": "custom",
     "Physical_Parameters": {

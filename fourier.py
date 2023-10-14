@@ -11,10 +11,6 @@ def get_series_at_x(x: float, L: float, N: int, x_points: list[float], y_points:
    f = np.array([b_n(i, x_points, y_points, L)*np.sin(i*np.pi/L*x) for i in range(1, N+1)])
    return f.sum()
 
-# def get_series_at_x_with_func(x: float, L: float, N: int, x_points: list[float], y_points: list[float], mult_func) -> float:
-#     f = np.array([b_n(i, x_points, y_points, L)*np.sin(i*np.pi/L*x)*mult_func(i) for i in range(1, N+1)])
-#     return f.sum()
-
 def test():
     L = 1
     N = 100

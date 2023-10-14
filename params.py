@@ -24,8 +24,40 @@ if params['Sample_Solutions']['Use']:
             def g(x: float) -> float:
                 num = 0.523598775598
                 return 2*np.sin(num*x+num)
+        case 'pos_x_squared':
+            # Physical
+            a = 1
+            b = 1
+            L = 2
+            k = 1
+            # Numerical Solution Parameters
+            t_final = 1
+            N_t = 100
+            N_x = 30
+            N_p = 10
+            NAME = 'pos_x_squared'
+            FPS = 15
+            
+            def g(x: float) -> float:
+                return 1-x*(x-2)
+        case 'neg_x_squared':
+            # Physical
+            a = 1
+            b = 1
+            L = 2
+            k = 1
+            # Numerical Solution Parameters
+            t_final = 1
+            N_t = 100
+            N_x = 30
+            N_p = 10
+            NAME = 'neg_x_squared'
+            FPS = 15
+            
+            def g(x: float) -> float:
+                return x*(x-2)+1
         case _ :
-            print('no such default solution')
+            raise Exception(f'no sample solution with name: {params["Sample_Solutions"]["solution"]}')
 else:
     NAME = params['Solution_Name']
     # Physical

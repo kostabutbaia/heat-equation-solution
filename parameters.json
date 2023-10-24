@@ -21,6 +21,7 @@
     "Numerical_Solution_Parameters": {
         "mu_1": 1,
         "mu_2": 1,
+        "source": 0,
         "delta_x": 0.1,
         "delta_t": 0.004
     }

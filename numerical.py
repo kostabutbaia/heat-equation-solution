@@ -10,7 +10,7 @@ def get_solution_at_n(n: int, u_at_prev_n: list[float]) -> list[float]:
     u_at_t = [0]*len(x_range)
     u_at_t[0], u_at_t[-1] = u_0(n*delta_t), u_L(n*delta_t)
     for i in range(1, len(x_range) - 1):
-        u_at_t[i] = k**2 * delta_t/delta_x**2 * (u_at_prev_n[i+1] + u_at_prev_n[i-1] - 2*u_at_prev_n[i]) + u_at_prev_n[i]
+        u_at_t[i] = k**2 * delta_t/delta_x**2 * (u_at_prev_n[i+1] + u_at_prev_n[i-1] - 2*u_at_prev_n[i]) + u_at_prev_n[i] + source(i*delta_x, (i-1)*delta_t)*delta_t
     return u_at_t
 
 def get_num_solution() -> list[list[float]]:

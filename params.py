@@ -32,6 +32,9 @@ if params['Sample_Solutions']['Use']:
             
             def u_L(t: float) -> float:
                 return 2
+            
+            def source(x: float, t: float) -> float:
+                return 0
         case 'pos_x_squared':
             # Physical
             a = 1
@@ -54,6 +57,9 @@ if params['Sample_Solutions']['Use']:
             
             def u_L(t: float) -> float:
                 return 1
+            
+            def source(x: float, t: float) -> float:
+                return 0
         case 'neg_x_squared':
             # Physical
             a = 1
@@ -76,6 +82,9 @@ if params['Sample_Solutions']['Use']:
             
             def u_L(t: float) -> float:
                 return 1
+            
+            def source(x: float, t: float) -> float:
+                return 0
         case _ :
             raise Exception(f'no sample solution with name: {params["Sample_Solutions"]["solution"]}')
 else:
@@ -105,7 +114,9 @@ else:
             
     def u_L(t: float) -> float:
         return eval(params['Numerical_Solution_Parameters']['mu_2'])
-
+    
+    def source(x: float, t: float) -> float:
+        return eval(params['Numerical_Solution_Parameters']['source'])
 
 if __name__ == '__main__':
     print(b)

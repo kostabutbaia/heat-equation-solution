@@ -11,11 +11,17 @@
         "k": 1,
         "g_function": "1-x*(x-2)"
     },
-    "Numerical_Solution_Parameters": {
+    "Solution_Parameters": {
         "amount_of_x_points": 30,
         "amount_of_t_points": 100,
         "final_t": 1,
         "partial_sum_amount": 10,
         "FPS": 15
+    },
+    "Numerical_Solution_Parameters": {
+        "mu_1": 1,
+        "mu_2": 1,
+        "delta_x": 0.1,
+        "delta_t": 0.004
     }
 }

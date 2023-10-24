@@ -11,7 +11,7 @@ def create_anim_gif(name: str) -> None:
     plt.grid()
     plt.plot(x_range, [particular_solution(x) for x in x_range], '--')
     frames = get_solution()
-    frames_num = get_num_solution(source)
+    frames_num = get_num_solution(source, u_0, u_L, g, k)
     l1, = plt.plot([], [], 'k-', label='Real Solution')
     l2, = plt.plot([], [], 'b--', label='Finite Difference Method')
     plt.legend()

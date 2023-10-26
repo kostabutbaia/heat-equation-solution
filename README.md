@@ -26,8 +26,8 @@ Set `Use` for sample to false and specify your own parameters, for example
 ```json
 {   
     "Sample_Solutions": {
-        "Use": false,
-        "solution": "default_1"
+        "Use": true,
+        "solution": "pos_x_squared"
     },
     "Solution_Name": "custom",
     "Physical_Parameters": {
@@ -37,12 +37,19 @@ Set `Use` for sample to false and specify your own parameters, for example
         "k": 1,
         "g_function": "1-x*(x-2)"
     },
-    "Numerical_Solution_Parameters": {
+    "Solution_Parameters": {
         "amount_of_x_points": 30,
         "amount_of_t_points": 100,
         "final_t": 1,
         "partial_sum_amount": 10,
         "FPS": 15
+    },
+    "Numerical_Solution_Parameters": {
+        "mu_1": 1,
+        "mu_2": 1,
+        "source": 0,
+        "delta_x": 0.1,
+        "delta_t": 0.004
     }
 }
 ```
@@ -62,4 +69,12 @@ python heateq.py
 For 3d surface plot of $u(x,t)$ run the command
 ```
 python 3dgraph.py
+```
+For Numerical solution run the command
+```
+python numerical.py
+```
+and to get gif of both numerical and real solution run the command
+```
+python compare_anim.py
 ```

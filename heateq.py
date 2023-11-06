@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import json
 from fourier import b_n
 from params import *
+from utils import partial_sum
 
 """ Points """
 x_range = np.linspace(0, L, N_x)
@@ -12,9 +13,6 @@ t_range = np.linspace(0, t_final, N_t)
 """ Solution """
 def particular_solution(x: float) -> float:
     return (b - a)/L * x + a
-
-def partial_sum(N: int, *funcs):
-    return sum([np.prod([func(i) for func in funcs]) for i in range(1, N)])
 
 def get_solution_at_t(t: float, N_p: int, x_range: list[float], g, p_sol) -> list[float]:
     fourier_y = np.array([g(x) - p_sol(x) for x in x_range])
